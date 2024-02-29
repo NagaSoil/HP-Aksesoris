@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\loginController;
+use App\Http\Controllers\dashboardController;
+use App\Http\Controllers\listitemController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +19,22 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('login', [loginController::class,'login']);
+Route::get('login', [loginController::class,'login']);
+
+
+//Route::get('/user/{id}', function ($id) {
+//    return 'User dengan ID ' . $id;
+//});
+
+//Route::prefix('admin')->group(function () {
+//    Route::get('/dashboard', function() {
+//        return 'Admin Dashoard';
+//    });
+//    Route::get('/users', function () {
+//        return('Admin Users');
+//    });
+//});
+
+//Route::get('/listbarang/{id}/{nama}', [ListBarangController::class,'tampilkan']);
