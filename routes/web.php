@@ -20,8 +20,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('login', [loginController::class,'login']);
-Route::get('login', [loginController::class,'login']);
+Route::get('login', [loginController::class,'index']);
+Route::get('dashboard', [dashboardController::class,'index']);
+Route::get('list_item', [listitemController::class,'index']);
 
 
 //Route::get('/user/{id}', function ($id) {
